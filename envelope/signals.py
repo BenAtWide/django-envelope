@@ -8,5 +8,7 @@ Signals sent by the application.
 
 from django.dispatch import Signal
 
-before_send = Signal(providing_args=["request", "form"])
-after_send = Signal(providing_args=["message", "form"])
+# Providing args has been removed, but they were message and form
+# for both these signals.
+before_send = Signal()
+after_send = Signal()
